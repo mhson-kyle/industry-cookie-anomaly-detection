@@ -1,0 +1,3 @@
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1PuSCo8rHtS214F7yVZzP8b9sHdWedUMF' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1PuSCo8rHtS214F7yVZzP8b9sHdWedUMF" -O archive.zip && rm -rf /tmp/cookies.txt
+unzip -q archive.zip -d ./ && rm archive.zip
+python data-preprocess.py
